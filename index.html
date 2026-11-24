@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#7c5cff" />
+  <meta name="description" content="Word Adventure — learn 10 English words a day with Bengali meanings, quizzes, streaks and parent progress." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Word Adv." />
+  <title>Word Adventure 🌈</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-logo">📚</span>
+        <span class="brand-name">Word <span>Adventure</span></span>
+      </div>
+      <div class="top-stats">
+        <div class="pill flame" id="streakPill" title="Daily streak"><span>🔥</span><b id="streakCount">0</b></div>
+        <div class="pill star" title="Stars earned"><span>⭐</span><b id="starCount">0</b></div>
+      </div>
+    </header>
+
+    <main id="screen" class="screen"></main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-tab="learn">
+        <span class="nav-icon">📖</span><span class="nav-label">Learn</span>
+      </button>
+      <button class="nav-btn" data-tab="quiz">
+        <span class="nav-icon">🎯</span><span class="nav-label">Quiz</span>
+      </button>
+      <button class="nav-btn" data-tab="progress">
+        <span class="nav-icon">🏆</span><span class="nav-label">Progress</span>
+      </button>
+      <button class="nav-btn" data-tab="parent">
+        <span class="nav-icon">👨‍👩‍👧</span><span class="nav-label">Parents</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <canvas id="confetti" class="confetti"></canvas>
+
+  <script src="words.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
